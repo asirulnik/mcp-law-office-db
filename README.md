@@ -1,4 +1,5 @@
 # Law Office SQLite MCP Server
+[![smithery badge](https://smithery.ai/badge/@asirulnik/mcp-law-office-db)](https://smithery.ai/server/@asirulnik/mcp-law-office-db)
 
 A Model Context Protocol (MCP) server implementation for law office database management, specializing in client records, case filing, time tracking, and invoice management.
 
@@ -35,6 +36,14 @@ This server provides a specialized database interface for law firms to:
 - Conflict detection for overlapping time entries
 
 ## Installation
+
+### Installing via Smithery
+
+To install Law Office Database Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@asirulnik/mcp-law-office-db):
+
+```bash
+npx -y @smithery/cli install @asirulnik/mcp-law-office-db --client claude
+```
 
 ### Prerequisites
 - **Python 3.10 or higher (Python 3.11+ recommended)**. Check with `python3.11 --version` (or similar). If needed, install using your system's package manager (e.g., `brew install python@3.11` on macOS).
