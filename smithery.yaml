@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required: []
+    properties:
+      dbPath:
+        type: string
+        default: ./database/law_office.db
+        description: Path to SQLite database file
+      logLevel:
+        type: string
+        default: INFO
+        description: Logging level
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({command: 'python3', args: ['server.py', '--db-path', config.dbPath, '--log-level', config.logLevel]})
+  exampleConfig:
+    dbPath: ./database/law_office.db
+    logLevel: INFO
